@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStore.Web", "GroceryStore.Web\GroceryStore.Web.csproj", "{09D917E5-1929-4E16-9AB1-75EE318DD85F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStore.Model", "GroceryStore.Model\GroceryStore.Model.csproj", "{4E546CDC-2A13-44EA-AB8E-45E0E2688B6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStore.Data", "GroceryStore.Data\GroceryStore.Data.csproj", "{5D7F0A22-4FE1-457D-8534-6613CCDF8D2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09D917E5-1929-4E16-9AB1-75EE318DD85F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D917E5-1929-4E16-9AB1-75EE318DD85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D917E5-1929-4E16-9AB1-75EE318DD85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D917E5-1929-4E16-9AB1-75EE318DD85F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E546CDC-2A13-44EA-AB8E-45E0E2688B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E546CDC-2A13-44EA-AB8E-45E0E2688B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E546CDC-2A13-44EA-AB8E-45E0E2688B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E546CDC-2A13-44EA-AB8E-45E0E2688B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D7F0A22-4FE1-457D-8534-6613CCDF8D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D7F0A22-4FE1-457D-8534-6613CCDF8D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D7F0A22-4FE1-457D-8534-6613CCDF8D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D7F0A22-4FE1-457D-8534-6613CCDF8D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
