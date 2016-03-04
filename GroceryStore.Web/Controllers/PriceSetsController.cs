@@ -46,13 +46,14 @@ namespace GroceryStore.Web.Controllers
 
         // POST: api/PriceSets
         [ResponseType(typeof(PriceSet))]
-        public IHttpActionResult Post(PriceSet priceSet)
+        public IHttpActionResult Post(PriceSet priceSet, int productId)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
+            priceSet.ProductId = productId;
             db.PriceSets.Add(priceSet);
             db.SaveChanges();
 

@@ -9,14 +9,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td> 8745VGG </td>
-                    <td> Product1 </td>
+                <tr ng-click="psCtrl.productService.getProduct(product.Id, $index)" ng-repeat="product in psCtrl.productService.products">
+                    <td> {{product.SKU}} </td>
+                    <td> {{product.Name}} </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="col-lg-4">
+        <h4> {{psCtrl.productService.product.Name}}</h4>
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
@@ -26,10 +27,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td> 12.15.2015 </td>
-                    <td> 12$ </td>
-                    <td> Delete </td>
+                <tr ng-repeat="priceSet in psCtrl.service.priceSets  | orderBy: priceSet.Date">
+                    <td> {{priceSet.Date | date:'MM/dd/yyyy'}} </td>
+                    <td> {{priceSet.Price}} </td>
+                    <td> <a ng-click="psCtrl.service.deletePriceSet(priceSet.Id, $index);">Delete</a> </td>
                 </tr>
             </tbody>
         </table>
@@ -39,13 +40,13 @@
         <form>
             <div class="form-group">
                 <label> Date </label>
-                <input class="form-control" type="date" />
+                <input class="form-control" type="date" ng-model="psCtrl.service.priceSet.Date"/>
             </div>
             <div class="form-group">
                 <label> Price </label>
-                <input class="form-control" type="number" step="0.01"/>
+                <input class="form-control" type="number" step="0.01" ng-model="psCtrl.service.priceSet.Price"/>
             </div>
-            <button class="btn btn-success btn-sm" type="submit"> Add new price </button>
+            <button class="btn btn-success btn-sm" type="submit" ng-click="psCtrl.service.addPriceSet();"> Add new price </button>
         </form>
     </div>
 </div>

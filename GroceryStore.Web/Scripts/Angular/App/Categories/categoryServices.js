@@ -71,7 +71,5 @@
             service.category = new category();
             service.categoryIndex = -1
         }
-
     }]);
-
 })();

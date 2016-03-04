@@ -9,7 +9,35 @@
     module.service('priceSetService', ['priceSet', function (priceSet) {
 
         var service = this;
+        service.priceSet = new priceSet();
+        service.priceSetIndex;
+        service.product = {};
+        service.priceSets = [];
 
+        service.addPriceSet = function () {
+            service.priceSet.$save({ productId: service.product.Id }, function (response) {
+                response.Date = new Date(response.Date);
+                service.priceSets.push(response);
+                service.emptyForm();
+            });
+        }
 
+        service.getPriceSetsByProductId = function () {
+            priceSet.query({ productId: service.product.Id }, function (response) {
+                service.priceSets = response;
+            });
+        }
+
+        service.deletePriceSet = function (priceSetId, $index) {
+            service.priceSet.$delete({ id: priceSetId }, function (response) {
+                service.priceSets.splice($index, 1);
+                service.emptyForm();
+            });
+        }
+
+        service.emptyForm = function () {
+            service.priceSet = new priceSet();
+            service.priceSetIndex = -1;
+        }
     }]);
 })();

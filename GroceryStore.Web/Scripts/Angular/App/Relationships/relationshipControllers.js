@@ -15,10 +15,7 @@
         ctrl.categoryService.getActiveCategories();
         ctrl.category = ctrl.categoryService.category;
 
-        
-
-
-        ctrl.connect = function () {         
+        ctrl.connect = function () {
             $http({
                 method: 'POST',
                 url: '/api/relationships',
@@ -36,13 +33,5 @@
                 console.log(response.statusText);
             });
         }
-
-       
-
-       
-
-
     }]);
-
-
 })();

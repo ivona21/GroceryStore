@@ -11,9 +11,6 @@
     module.service('relationshipService', ['relationship', 'productService', 'categoryService', function (relationship, productService, categoryService) {
 
         var service = this;
-        service.relationship = new relationship();
-               
+        service.relationship = new relationship();               
     }]);
-
-
 })();

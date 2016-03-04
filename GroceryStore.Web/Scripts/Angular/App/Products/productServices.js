@@ -9,9 +9,11 @@
         });
     }]);
 
-    module.service('productService', ['product', function (product) {
+    module.service('productService', ['product', 'priceSetService', function (product, priceSetService) {
 
         var service = this;
+        service.priceSetService = priceSetService;
+
         service.products = [];
         service.product = new product();
         service.productIndex;
@@ -34,7 +36,10 @@
                 service.product = response;
                 service.productIndex = $index;
                 service.products[$index] = service.product;
+                service.priceSetService.product = service.product;
+                service.priceSetService.getPriceSetsByProductId();
                 console.log('prod svc, prod id: ' + service.product.Id);
+                console.log('prod svc, psSvcProduct: ' + service.priceSetService.product.Id + ' ' + service.priceSetService.product.Name);
             });
         };
 
@@ -50,7 +55,6 @@
             service.product.$update({ id: service.product.Id, product: service.product }, function (response) {
                 service.emptyForm();
             });
-
         }
 
         service.addOrUpdate = function () {
@@ -58,8 +62,6 @@
                 service.addProduct();
             else
                 service.updateProduct();
-
-
         }
 
         service.deleteProduct = function (id, $index) {
@@ -76,11 +78,5 @@
             service.product = new product();
             service.productIndex = -1;
         }
-
-
-
     }]);
-
-
-
 })();

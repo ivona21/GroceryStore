@@ -7,9 +7,7 @@
                                                "priceSetControllers", "priceSetServices"]);
 
 
-
     app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
-
 
         $urlRouterProvider.otherwise('/products');
 
@@ -27,8 +25,8 @@
         }).state('priceSets', {
             url: '/priceSets',
             templateUrl: '/Scripts/Angular/App/PriceSets/priceSetList.html',
-            controller: 'productsController',
-            controllerAs: 'productsCtrl'
+            controller: 'priceSetController',
+            controllerAs: 'psCtrl'
         }).state('relationships', {
             url: '/relationships',
             templateUrl: '/Scripts/Angular/App/Relationships/relationshipList.html',
@@ -40,10 +38,5 @@
             controller: 'productsController',
             controllerAs: 'productsCtrl'
         })
-
     }]);
-
-    
-
-   
 })();
