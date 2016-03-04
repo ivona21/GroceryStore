@@ -8,6 +8,6 @@
         ctrl.service = priceSetService;
         ctrl.productService = productService;
 
-        ctrl.productService.getProducts();       
+        ctrl.productService.getProducts();     
     }]);
 })();

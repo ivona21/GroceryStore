@@ -12,5 +12,10 @@ namespace GroceryStore.Model
         public string SKU { get; set; }
         public bool Available { get; set; }
         public virtual List<PriceSet> PriceSets { get; set; }
+        public virtual List<Relationship> Relationships { get; set; }
+
+        //
+        public int NumberOfPrices { get; set; }
+        public float SumOfPrices { get; set; }
     }
 }

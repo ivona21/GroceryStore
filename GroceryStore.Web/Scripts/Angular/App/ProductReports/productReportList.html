@@ -1,5 +1,5 @@
 ﻿<div class="container">
-    <h4> Reports </h4>
+    <h3> Reports </h3>
     <div class="col-lg-6">
         <table class="table table-bordered table-hover">
             <thead>
@@ -9,9 +9,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td> 8745VGG </td>
-                    <td> Cheese </td>
+                <tr ng-click="productsCtrl.service.getReport(product.Id);" ng-repeat="product in productsCtrl.service.products track by $index">
+                    <td> {{product.SKU}} </td>
+                    <td> {{product.Name}} </td>
                 </tr>
             </tbody>
         </table>
@@ -19,13 +19,14 @@
     <div class="col-lg-6">
         <div class="product-report">
             <h4> Product Description </h4>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p> {{ productsCtrl.service.productReport.Description}}</p>
             <h4> Current Price </h4>
-            <p> 5.00$ </p>
+            <p> {{ productsCtrl.service.productReport.CurrentPrice | currency : $}} </p>
             <h4>Average price </h4>
-            <p> 4.75$ </p>
+            <p> {{ productsCtrl.service.productReport.AveragePrice | currency : $}} </p>
             <h4> Categories </h4>
-            <p> Food, Cheese </p>
+            <p> {{ productsCtrl.service.productReport.Categories}} </p>
         </div>
     </div>
+</div>
 

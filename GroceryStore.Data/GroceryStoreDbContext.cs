@@ -10,7 +10,11 @@ namespace GroceryStore.Data
 {
     public class GroceryStoreDbContext : DbContext
     {
-        public GroceryStoreDbContext() : base(nameOrConnectionString: "DefaultConnection") { }
+        public GroceryStoreDbContext() : base(nameOrConnectionString: "DefaultConnection")
+        {
+            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
+        }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Relationship> Relationships { get; set; }

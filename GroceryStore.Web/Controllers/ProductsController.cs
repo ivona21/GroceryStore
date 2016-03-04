@@ -11,7 +11,7 @@ using System.Web.Http.Description;
 using System.Data.Entity.Infrastructure;
 
 namespace GroceryStore.Web.Controllers
-{   
+{
     public class ProductsController : ApiController
     {
         GroceryStoreDbContext db = new GroceryStoreDbContext();
@@ -30,6 +30,32 @@ namespace GroceryStore.Web.Controllers
         public IQueryable<Product> Get(bool onlyActive)
         {
             return db.Products.Where(product => product.Available);
+        }
+
+
+        public IHttpActionResult GetReport(int productId, string littleCheat)
+        {
+            Product product = db.Products.Find(productId);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            var priceSets = db.PriceSets.Where(ps => ps.ProductId == productId);
+            ProductReport productReport = new ProductReport()
+            {
+                Id = product.Id,
+               // CurrentPrice = 5.7f,
+                CurrentPrice = priceSets.OrderByDescending(ps => ps.Date).FirstOrDefault().Price,
+                AveragePrice = product.AveragePrice,
+                Description = product.Description,
+                Categories = new List<string>()
+                {
+                    "hard", "coded", "names"
+                }                               
+            };
+
+            return Ok(productReport);
         }
 
         // GET: api/Products/5
@@ -108,6 +134,27 @@ namespace GroceryStore.Web.Controllers
             db.SaveChanges();
 
             return Ok(product);
+        }
+
+        internal void ChangeProductAveragePrice(int productId, float price, bool addingNewPrice)
+        {
+            Product product = db.Products.Find(productId);
+
+            if (addingNewPrice)
+            {
+                product.NumberOfPrices++;
+                product.SumOfPrices = product.SumOfPrices + price;
+            }
+            else
+            {
+                product.NumberOfPrices--;
+                product.SumOfPrices = product.SumOfPrices - price;
+            }
+
+            product.AveragePrice = product.SumOfPrices / product.NumberOfPrices;
+
+            db.Entry(product).State = EntityState.Modified;
+            db.SaveChanges();
         }
 
         private bool ProductExists(int id)

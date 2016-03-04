@@ -15,7 +15,7 @@
         service.priceSets = [];
 
         service.addPriceSet = function () {
-            service.priceSet.$save({ productId: service.product.Id }, function (response) {
+            service.priceSet.$save({ productId: service.product.Id }, function (response) {               
                 response.Date = new Date(response.Date);
                 service.priceSets.push(response);
                 service.emptyForm();

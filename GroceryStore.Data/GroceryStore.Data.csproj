@@ -52,6 +52,7 @@
     <Compile Include="Configuration\PriceSetConfiguration.cs" />
     <Compile Include="Configuration\RelationshipConfiguration.cs" />
     <Compile Include="GroceryStoreDbContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

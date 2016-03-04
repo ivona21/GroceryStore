@@ -10,3 +10,15 @@ C:\Users\Ivona\Documents\1Programming\MyProjects\GroceryStoreFewTrys\GroceryStor
 C:\Users\Ivona\Documents\1Programming\MyProjects\GroceryStoreFewTrys\GroceryStore04\GroceryStore\GroceryStore.Data\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Ivona\Documents\1Programming\MyProjects\GroceryStoreFewTrys\GroceryStore04\GroceryStore\GroceryStore.Data\bin\Debug\EntityFramework.xml
 C:\Users\Ivona\Documents\1Programming\MyProjects\GroceryStoreFewTrys\GroceryStore04\GroceryStore\GroceryStore.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\bin\Debug\GroceryStore.Data.dll.config
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\bin\Debug\GroceryStore.Data.dll
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\bin\Debug\GroceryStore.Data.pdb
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\bin\Debug\EntityFramework.dll
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\bin\Debug\GroceryStore.Model.dll
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\bin\Debug\GroceryStore.Model.pdb
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\bin\Debug\EntityFramework.xml
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\obj\Debug\GroceryStore.Data.csprojResolveAssemblyReference.cache
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\obj\Debug\GroceryStore.Data.dll
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Data\obj\Debug\GroceryStore.Data.pdb

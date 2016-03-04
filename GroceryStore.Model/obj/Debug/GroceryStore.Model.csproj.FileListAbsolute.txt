@@ -3,3 +3,8 @@ C:\Users\Ivona\Documents\1Programming\MyProjects\GroceryStoreFewTrys\GroceryStor
 C:\Users\Ivona\Documents\1Programming\MyProjects\GroceryStoreFewTrys\GroceryStore04\GroceryStore\GroceryStore.Model\obj\Debug\GroceryStore.Model.csprojResolveAssemblyReference.cache
 C:\Users\Ivona\Documents\1Programming\MyProjects\GroceryStoreFewTrys\GroceryStore04\GroceryStore\GroceryStore.Model\obj\Debug\GroceryStore.Model.dll
 C:\Users\Ivona\Documents\1Programming\MyProjects\GroceryStoreFewTrys\GroceryStore04\GroceryStore\GroceryStore.Model\obj\Debug\GroceryStore.Model.pdb
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Model\bin\Debug\GroceryStore.Model.dll
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Model\bin\Debug\GroceryStore.Model.pdb
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Model\obj\Debug\GroceryStore.Model.csprojResolveAssemblyReference.cache
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Model\obj\Debug\GroceryStore.Model.dll
+C:\Users\Ivona\Documents\1Programming\MyProjects\ForGitHub\GroceryStore\GroceryStore.Model\obj\Debug\GroceryStore.Model.pdb

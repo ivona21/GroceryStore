@@ -47,13 +47,17 @@ namespace GroceryStore.Web.Controllers
         // POST: api/PriceSets
         [ResponseType(typeof(PriceSet))]
         public IHttpActionResult Post(PriceSet priceSet, int productId)
-        {
+        {           
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
             priceSet.ProductId = productId;
+
+            ProductsController ctrl = new ProductsController();
+            ctrl.ChangeProductAveragePrice(productId, priceSet.Price, true);
+
             db.PriceSets.Add(priceSet);
             db.SaveChanges();
 
@@ -69,6 +73,10 @@ namespace GroceryStore.Web.Controllers
             {
                 return NotFound();
             }
+
+            //Change product average price
+            ProductsController ctrl = new ProductsController();
+            ctrl.ChangeProductAveragePrice(priceSet.ProductId, priceSet.Price, false);           
 
             db.PriceSets.Remove(priceSet);
             db.SaveChanges();

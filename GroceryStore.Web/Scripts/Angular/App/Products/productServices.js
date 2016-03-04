@@ -18,6 +18,8 @@
         service.product = new product();
         service.productIndex;
 
+        service.productReport = {};
+
         service.getProducts = function () {
             product.query(function (response) {
                 service.products = response;
@@ -40,8 +42,15 @@
                 service.priceSetService.getPriceSetsByProductId();
                 console.log('prod svc, prod id: ' + service.product.Id);
                 console.log('prod svc, psSvcProduct: ' + service.priceSetService.product.Id + ' ' + service.priceSetService.product.Name);
+                console.log('average price: ' + service.priceSetService.product.AveragePrice);
             });
         };
+
+        service.getReport = function (id) {           
+            service.product.$get({ productId: id, littleCheat: 'hi' }, function (response) {
+                service.productReport = response;              
+            });
+        }
 
         service.addProduct = function () {
             service.product.$save(function (response) {

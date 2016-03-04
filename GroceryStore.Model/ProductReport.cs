@@ -12,6 +12,6 @@ namespace GroceryStore.Model
         public string Description { get; set; }
         public float CurrentPrice { get; set; }
         public float AveragePrice { get; set; }
-        public virtual List<Relationship> Relationships { get; set; }
+        public virtual List<string> Categories { get; set; }
     }
 }
