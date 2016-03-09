@@ -15,7 +15,19 @@
         ctrl.categoryService.getActiveCategories();
         ctrl.category = ctrl.categoryService.category;
 
-        ctrl.connect = function () {
+
+
+        ctrl.connectOrDisconnect = function (connected, categoryId) {
+            if (!connected) {
+                relationshipService.disconnect(ctrl.productService.product.Id, categoryId);
+            }
+            else {
+                ctrl.connect(categoryId);
+            }
+
+        };
+
+        ctrl.connect = function (categoryId) {
             $http({
                 method: 'POST',
                 url: '/api/relationships',
@@ -24,7 +36,7 @@
                 },
                 data: {
                     productId: ctrl.productService.product.Id,
-                    categoryId: ctrl.categoryService.category.Id,
+                    categoryId: categoryId,
                     connected: true
                 }
             }).then(function (response) {
@@ -33,5 +45,6 @@
                 console.log(response.statusText);
             });
         }
+       
     }]);
 })();

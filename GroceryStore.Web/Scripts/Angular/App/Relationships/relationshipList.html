@@ -5,31 +5,32 @@
             <thead>
                 <tr>
                     <th> SKU </th>
-                    <th> Name </th>                  
+                    <th> Name </th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="product in relCtrl.productService.products" ng-click="relCtrl.productService.getProduct(product.Id, $index);">
-                    <td> {{product.SKU}} </td>                 
+                <tr ng-repeat="product in relCtrl.productService.products" ng-click="relCtrl.service.getAssignedCategories(product.Id); relCtrl.productService.getProduct(product.Id, $index)">
+                    <td> {{product.SKU}} </td>
                     <td> {{product.Name}} </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="col-lg-6">
-       <table class="table table-striped table-hover">
-           <thead>
-               <tr>
-                   <th> Assigned </th>
-                   <th> Category </th>
-               </tr>
-           </thead>
-           <tbody>
-               <tr ng-repeat="category in relCtrl.categoryService.categories" ng-click="relCtrl.categoryService.getCategory(category.Id, $index);">
-                   <td> <button class="btn btn-sm btn-default" ng-click="relCtrl.connect();"> Connect </button></td>
-                   <td> {{ category.Name }} </td>
-               </tr>               
+
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th> Assigned </th>
+                    <th> Category </th>
+                </tr>
+            </thead>
+            <tbody>              
+                <tr ng-repeat="category in relCtrl.service.assignedCategories">                   
+                    <td> <input type="checkbox" ng-model="category.Connected"  ng-click="relCtrl.connectOrDisconnect(category.Connected, category.Id);"/></td>
+                    <td> {{ category.CategoryName }} </td>
+                </tr>
            </tbody>
-       </table>
+        </table>
     </div>
 </div>

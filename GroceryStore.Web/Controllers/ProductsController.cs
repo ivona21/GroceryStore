@@ -35,25 +35,27 @@ namespace GroceryStore.Web.Controllers
 
         public IHttpActionResult GetReport(int productId, string littleCheat)
         {
-            Product product = db.Products.Find(productId);
+            Product product = db.Products.Find(productId);          
+            
             if (product == null)
             {
                 return NotFound();
             }
 
             var priceSets = db.PriceSets.Where(ps => ps.ProductId == productId);
+            var categories = db.Relationships.Where(r => r.ProductId == productId).Select(r => r.Category.Name);
+
+           
+
+
             ProductReport productReport = new ProductReport()
             {
                 Id = product.Id,
-               // CurrentPrice = 5.7f,
                 CurrentPrice = priceSets.OrderByDescending(ps => ps.Date).FirstOrDefault().Price,
                 AveragePrice = product.AveragePrice,
                 Description = product.Description,
-                Categories = new List<string>()
-                {
-                    "hard", "coded", "names"
-                }                               
-            };
+                Categories = String.Join(", ", categories.ToArray())
+        };
 
             return Ok(productReport);
         }
