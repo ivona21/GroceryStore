@@ -1,5 +1,4 @@
-﻿<div class="container">
-    <h3> Products </h3>       
+﻿<div class="container">  
     <div class="col-lg-6">      
         <table class="table table-bordered table-hover">
             <thead>
@@ -19,28 +18,7 @@
                 </tr>
             </tbody>
         </table>
+        <button class="btn btn-success" style="float: right;" ng-click="productsCtrl.service.emptyForm();"><i class="glyphicon glyphicon-plus"></i> Add new product</button>
     </div>
-    <div class="col-lg-6">       
-       <form>
-           <div class="form-group">
-               <label> Product Name: </label>
-               <input type="text" class="form-control" ng-model="productsCtrl.service.product.Name"/>
-           </div>
-           <div class="form-group">
-               <label> SKU: </label>
-               <input type="text" class="form-control" ng-model="productsCtrl.service.product.SKU" />
-           </div>
-           <div class="checkbox">
-               <label>
-                   <input type="checkbox" ng-model="productsCtrl.service.product.Available"/> product is active 
-               </label>
-           </div>
-           <div class="form-group">
-               <label> Product Description </label>
-              <textarea class="form-control" rows="4" ng-model="productsCtrl.service.product.Description"></textarea>
-           </div>
-           <button type="submit" class="btn btn-danger btn-sm" ng-click="productsCtrl.service.emptyForm();"> Cancel </button>
-           <button type="submit" class="btn btn-success btn-sm" ng-click="productsCtrl.service.addOrUpdate();"> Update / Save Changes </button>
-       </form>
-    </div>
+   <product-add-update></product-add-update>
 </div>

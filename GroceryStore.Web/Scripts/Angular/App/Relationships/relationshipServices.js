@@ -14,7 +14,7 @@
         service.relationship = new relationship();
         service.assignedCategories = [];
 
-
+      
         service.getAssignedCategories = function (id) {
             relationship.query({ productId: id }, function (response) {
                 service.assignedCategories = response;

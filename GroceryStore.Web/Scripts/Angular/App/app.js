@@ -1,10 +1,12 @@
 ﻿(function () {
 
     var app = angular.module("GroceryStore", ["ngResource", "ui.router",
-                                               "productControllers", "productServices",
-                                               "categoryControllers", "categoryServices",
+                                               "commonDirectives",
+                                               "productDirectives", "productControllers", "productServices",
+                                               "categoryDirectives", "categoryControllers", "categoryServices",
                                                "relationshipControllers", "relationshipServices",
-                                               "priceSetControllers", "priceSetServices"]);
+                                               "priceSetControllers", "priceSetServices",
+                                               "productReportControllers"]);
 
 
     app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
@@ -35,8 +37,8 @@
         }).state('productReports', {
             url: '/productReports',
             templateUrl: '/Scripts/Angular/App/ProductReports/productReportList.html',
-            controller: 'productsController',
-            controllerAs: 'productsCtrl'
+            controller: 'productReportController',
+            controllerAs: 'prCtrl'
         })
     }]);
 })();

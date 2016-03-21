@@ -29,14 +29,18 @@ namespace GroceryStore.Web
                 "~/Scripts/Angular/angular-resource.min.js",
                 "~/Scripts/Angular/ui-router.min.js",
                 "~/Scripts/Angular/App/app.js",
-                "~/Scripts/Angular/App/Products/productServices.js",
+                "~/Scripts/Angular/App/Common/commonDirectives.js",
+                "~/Scripts/Angular/App/Products/productServices.js",               
                 "~/Scripts/Angular/App/Products/productControllers.js",
+                "~/Scripts/Angular/App/ProductReports/productReportControllers.js",
+                "~/Scripts/Angular/App/Products/productDirectives.js",
                 "~/Scripts/Angular/App/Categories/categoryServices.js",
                 "~/Scripts/Angular/App/Categories/categoryControllers.js",
+                "~/Scripts/Angular/App/Categories/categoryDirectives.js",
                 "~/Scripts/Angular/App/Relationships/relationshipServices.js",
                 "~/Scripts/Angular/App/Relationships/relationshipControllers.js",
                 "~/Scripts/Angular/App/PriceSets/priceSetServices.js",
-                "~/Scripts/Angular/App/PriceSets/priceSetControllers.js"
+                "~/Scripts/Angular/App/PriceSets/priceSetControllers.js"              
                 ));
         }
     }

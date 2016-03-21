@@ -33,8 +33,7 @@
             service.category.$get({ id: id }, function (response) {
                 service.category = response;
                 service.categoryIndex = $index;
-                service.categories[$index] = service.category;
-                console.log('cat svc, cat id: ' + service.category.Id);
+                service.categories[$index] = service.category;             
             })
         };
 

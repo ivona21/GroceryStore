@@ -2,6 +2,7 @@
 
     var module = angular.module('productServices', [])
 
+
     module.factory('product', ["$resource", function ($resource) {
 
         return $resource('/api/products/:id', null, {
@@ -15,6 +16,7 @@
         service.priceSetService = priceSetService;
 
         service.products = [];
+        service.activeProducts = [];
         service.product = new product();
         service.productIndex;
 
@@ -28,7 +30,7 @@
 
         service.getActiveProducts = function () {          
             product.query({ onlyActive: true }, function (response) {
-                service.products = response;
+                service.activeProducts = response;
             });
         }
 
@@ -39,10 +41,13 @@
                 service.productIndex = $index;
                 service.products[$index] = service.product;
                 service.priceSetService.product = service.product;
-                service.priceSetService.getPriceSetsByProductId();
-                console.log('prod svc, prod id: ' + service.product.Id);
-                console.log('prod svc, psSvcProduct: ' + service.priceSetService.product.Id + ' ' + service.priceSetService.product.Name);
-                console.log('average price: ' + service.priceSetService.product.AveragePrice);
+                service.priceSetService.getPriceSetsByProductId();               
+            });
+        };
+
+        service.getFirstProduct = function () {
+            service.product.$get({ first: 'first' }, function (response) {
+                service.firstProduct = response;               
             });
         };
 

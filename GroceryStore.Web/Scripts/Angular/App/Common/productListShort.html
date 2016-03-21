@@ -1,0 +1,14 @@
+﻿<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th> SKU </th>
+            <th> Name </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="product in productsCtrl.service.activeProducts track by $index" ng-click="productsCtrl.service.getProduct(product.Id, $index);">
+            <td> {{product.SKU}} </td>
+            <td> {{product.Name}} </td>
+        </tr>
+    </tbody>
+</table>

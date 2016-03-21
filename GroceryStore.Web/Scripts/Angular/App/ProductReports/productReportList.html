@@ -1,5 +1,4 @@
-﻿<div class="container">
-    <h3> Reports </h3>
+﻿<div class="container">   
     <div class="col-lg-6">
         <table class="table table-bordered table-hover">
             <thead>
@@ -9,7 +8,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-click="productsCtrl.service.getReport(product.Id);" ng-repeat="product in productsCtrl.service.products track by $index">
+                <tr ng-click="prCtrl.service.getReport(product.Id);" ng-repeat="product in prCtrl.service.activeProducts track by $index">
                     <td> {{product.SKU}} </td>
                     <td> {{product.Name}} </td>
                 </tr>
@@ -18,14 +17,15 @@
     </div>
     <div class="col-lg-6">
         <div class="product-report">
-            <h4> Product Description </h4>
-            <p> {{ productsCtrl.service.productReport.Description}}</p>
-            <h4> Current Price </h4>
-            <p> {{ productsCtrl.service.productReport.CurrentPrice | currency : $}} </p>
-            <h4>Average price </h4>
-            <p> {{ productsCtrl.service.productReport.AveragePrice | currency : $}} </p>
-            <h4> Categories </h4>
-            <p> {{ productsCtrl.service.productReport.Categories}} </p>
+            
+            <h5> Product Description </h5>
+            <p> {{ prCtrl.service.productReport.Description}}</p>
+            <h5> Current Price </h5>
+            <p> {{ prCtrl.service.productReport.CurrentPrice | currency : $}} </p>
+            <h5>Average price </h5>
+            <p> {{ prCtrl.service.productReport.AveragePrice | currency : $}} </p>
+            <h5> Categories </h5>
+            <p> {{ prCtrl.service.productReport.Categories}} </p>
         </div>
     </div>
 </div>

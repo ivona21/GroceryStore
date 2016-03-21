@@ -26,17 +26,17 @@ namespace GroceryStore.Web.Controllers
             return db.Products;
         }
 
-
+        // GET: api/Products/true
         public IQueryable<Product> Get(bool onlyActive)
         {
             return db.Products.Where(product => product.Available);
         }
 
-
+        // GET: api/Products/1/cheat
         public IHttpActionResult GetReport(int productId, string littleCheat)
         {
-            Product product = db.Products.Find(productId);          
-            
+            Product product = db.Products.Find(productId);
+
             if (product == null)
             {
                 return NotFound();
@@ -44,18 +44,20 @@ namespace GroceryStore.Web.Controllers
 
             var priceSets = db.PriceSets.Where(ps => ps.ProductId == productId);
             var categories = db.Relationships.Where(r => r.ProductId == productId).Select(r => r.Category.Name);
-
-           
-
-
             ProductReport productReport = new ProductReport()
             {
                 Id = product.Id,
-                CurrentPrice = priceSets.OrderByDescending(ps => ps.Date).FirstOrDefault().Price,
-                AveragePrice = product.AveragePrice,
-                Description = product.Description,
-                Categories = String.Join(", ", categories.ToArray())
-        };
+                Description = product.Description
+            };
+            if (priceSets.Count() > 0)
+            {
+                productReport.CurrentPrice = priceSets.OrderByDescending(ps => ps.Date).FirstOrDefault().Price;
+                productReport.AveragePrice = product.AveragePrice;
+            }
+            if (categories.Count() > 0)
+            {
+                productReport.Categories = String.Join(", ", categories.ToArray());
+            }
 
             return Ok(productReport);
         }
@@ -69,6 +71,13 @@ namespace GroceryStore.Web.Controllers
                 return NotFound();
             }
 
+            return Ok(product);
+        }
+
+        // GET: api/Products/first
+        public IHttpActionResult GetFirstProduct(string first)
+        {
+            Product product = db.Products.FirstOrDefault(p => p.Available);
             return Ok(product);
         }
 
