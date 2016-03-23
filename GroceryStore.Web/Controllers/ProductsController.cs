@@ -90,6 +90,13 @@ namespace GroceryStore.Web.Controllers
                 return BadRequest(ModelState);
             }
 
+            var p = db.Products.FirstOrDefault(x => x.SKU == product.SKU);
+
+            if (p != null)
+            {
+                return BadRequest(ModelState);
+            }
+
             db.Products.Add(product);
             db.SaveChanges();
 
@@ -109,6 +116,7 @@ namespace GroceryStore.Web.Controllers
             {
                 return BadRequest();
             }
+           
 
             db.Entry(product).State = EntityState.Modified;
 
@@ -139,7 +147,7 @@ namespace GroceryStore.Web.Controllers
             if (product == null)
             {
                 return NotFound();
-            }
+            }           
 
             db.Products.Remove(product);
             db.SaveChanges();
