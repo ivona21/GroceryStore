@@ -53,7 +53,8 @@
 
         service.getReport = function (id) {           
             service.product.$get({ productId: id, littleCheat: 'hi' }, function (response) {
-                service.productReport = response;              
+                service.productReport = response;
+                service.product = service.getProduct(id);
             });
         }
 
