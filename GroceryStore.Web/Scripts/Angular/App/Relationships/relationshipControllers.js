@@ -6,20 +6,14 @@
 
         var ctrl = this;
         ctrl.service = relationshipService;
-
         ctrl.productService = productService;
-        ctrl.productService.getFirstProduct();
+
         ctrl.product = ctrl.productService.product;
-        ctrl.categoryService = categoryService;       
+        ctrl.categoryService = categoryService;
         ctrl.category = ctrl.categoryService.category;
 
+        ctrl.categoryService.getActiveCategories();
 
-        ctrl.productService.getActiveProducts();
-        ctrl.categoryService.getActiveCategories();     
-
-        if (ctrl.product.Id) {          
-            ctrl.service.getAssignedCategories(ctrl.productService.product.Id);
-        }
 
         ctrl.connectOrDisconnect = function (connected, categoryId) {
             if (!connected) {
@@ -49,6 +43,6 @@
                 console.log(response.statusText);
             });
         }
-       
+
     }]);
 })();

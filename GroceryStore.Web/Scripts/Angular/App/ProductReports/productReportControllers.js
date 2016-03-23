@@ -6,15 +6,6 @@
 
         var ctrl = this;
         ctrl.service = productService;
-
-        ctrl.service.getActiveProducts();
-        ctrl.service.getFirstProduct();      
-
-
-        if (ctrl.service.product.Id) {
-            ctrl.service.getReport(ctrl.service.product.Id);
-        }
-
     }]);
 
 })();

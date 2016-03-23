@@ -11,13 +11,9 @@
 
         ctrl.product = new product();
 
-
-       
-
-
         ctrl.getActiveProducts = function () {
             product.query({ onlyActive: true }, function (response) {
-                ctrl.productService.activeProducts = response;               
+                ctrl.productService.activeProducts = response;
             });
         };
 
@@ -27,7 +23,6 @@
             if (ctrl.tab == 3 || ctrl.tab == 4 || ctrl.tab == 5) {
                 ctrl.getFirstProduct();
             }
-        
         }
 
         ctrl.getFirstProduct = function () {

@@ -1,7 +1,7 @@
 ﻿(function () {
 
     var app = angular.module("GroceryStore", ["ngResource", "ui.router",
-                                               "commonDirectives",
+                                               "commonDirectives", "commonControllers",
                                                "productDirectives", "productControllers", "productServices",
                                                "categoryDirectives", "categoryControllers", "categoryServices",
                                                "relationshipControllers", "relationshipServices",

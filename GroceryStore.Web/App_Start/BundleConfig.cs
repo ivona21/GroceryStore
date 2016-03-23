@@ -30,6 +30,7 @@ namespace GroceryStore.Web
                 "~/Scripts/Angular/ui-router.min.js",
                 "~/Scripts/Angular/App/app.js",
                 "~/Scripts/Angular/App/Common/commonDirectives.js",
+                "~/Scripts/Angular/App/Common/commonControllers.js",
                 "~/Scripts/Angular/App/Products/productServices.js",               
                 "~/Scripts/Angular/App/Products/productControllers.js",
                 "~/Scripts/Angular/App/ProductReports/productReportControllers.js",

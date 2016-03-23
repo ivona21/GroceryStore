@@ -4,6 +4,15 @@
     <title> Grocery Store </title>
 </head>
 <body>
+    <div class="navbar-collapse collapse" ng-controller="navbarController as navCtrl">
+        <ul class="nav navbar-nav">
+            <li ng-click="navCtrl.changeTab(1);"><a ui-sref="products"> Products </a></li>
+            <li ng-click="navCtrl.changeTab(2);"><a ui-sref="categories"> Categories </a></li>
+            <li ng-click="navCtrl.changeTab(3);"><a ui-sref="relationships"> Relationships </a></li>
+            <li ng-click="navCtrl.changeTab(4);"><a ui-sref="priceSets"> Prices </a></li>
+            <li ng-click="navCtrl.changeTab(5);"><a ui-sref="productReports"> Product Reports </a></li>
+        </ul>
+    </div>
     <div ui-view></div>
 </body>
 </html>
