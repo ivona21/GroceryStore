@@ -101,7 +101,9 @@ namespace GroceryStore.Web.Controllers
             if (category == null)
             {
                 return NotFound();
-            }           
+            }     
+            
+                  
 
             db.Categories.Remove(category);
             db.SaveChanges();
