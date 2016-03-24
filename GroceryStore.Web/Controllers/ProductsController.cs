@@ -94,7 +94,7 @@ namespace GroceryStore.Web.Controllers
 
             if (p != null)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Cannot create product with an existing SKU");
             }
 
             db.Products.Add(product);
@@ -116,6 +116,13 @@ namespace GroceryStore.Web.Controllers
             {
                 return BadRequest();
             }
+
+            var p = db.Products.FirstOrDefault(x => x.SKU == product.SKU);
+
+            if (p != null)
+            {
+                return BadRequest("This SKU is not available because another product use it");
+            }          
            
 
             db.Entry(product).State = EntityState.Modified;

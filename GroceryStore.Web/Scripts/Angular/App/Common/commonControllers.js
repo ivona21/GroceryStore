@@ -18,10 +18,13 @@
         };
 
         ctrl.changeTab = function (tab) {
-            ctrl.tab = tab;
-            ctrl.getActiveProducts();
+            ctrl.tab = tab;           
             if (ctrl.tab == 3 || ctrl.tab == 4 || ctrl.tab == 5) {
+                ctrl.getActiveProducts();
                 ctrl.getFirstProduct();
+            }
+            if (ctrl.tab == 1) {
+                ctrl.productService.emptyForm();
             }
         }
 

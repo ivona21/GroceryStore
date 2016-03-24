@@ -268,6 +268,7 @@
     <Content Include="Scripts\Angular\App\Categories\categoryDirectives.js" />
     <Content Include="Scripts\Angular\App\Categories\categoryList.html" />
     <Content Include="Scripts\Angular\App\Categories\categoryServices.js" />
+    <Content Include="Scripts\Angular\App\Common\commonControllers.js" />
     <Content Include="Scripts\Angular\App\Common\commonDirectives.js" />
     <Content Include="Scripts\Angular\App\Common\productListShort.html" />
     <Content Include="Scripts\Angular\App\PriceSets\priceSetControllers.js" />

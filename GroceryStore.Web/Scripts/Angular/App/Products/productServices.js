@@ -63,12 +63,16 @@
                 service.product = response;
                 service.products.push(service.product);
                 service.emptyForm();
+            }, function (error) {
+                console.log(error.data.Message);                
             });
         }
 
         service.updateProduct = function () {
             service.product.$update({ id: service.product.Id, product: service.product }, function (response) {
                 service.emptyForm();
+            }, function (error) {
+                console.log(error.data.Message);
             });
         }
 
