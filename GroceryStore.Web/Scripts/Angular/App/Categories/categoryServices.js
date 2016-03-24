@@ -61,6 +61,8 @@
             service.category.$delete({ id: id }, function (response) {
                 service.categories.splice($index, 1);
                 service.emptyForm();
+            }, function (error) {
+                console.log(error.data.Message);
             });
         }
 

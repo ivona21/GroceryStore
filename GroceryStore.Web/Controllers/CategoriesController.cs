@@ -101,9 +101,14 @@ namespace GroceryStore.Web.Controllers
             if (category == null)
             {
                 return NotFound();
-            }     
+            }
+
+            var relationships = db.Relationships.Where(r => r.CategoryId == id).ToList();
             
-                  
+            if (relationships.Count > 0)
+            {
+                return BadRequest("Cannot delete category attached to one or more products");
+            }   
 
             db.Categories.Remove(category);
             db.SaveChanges();

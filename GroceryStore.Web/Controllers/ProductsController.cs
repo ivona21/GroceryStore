@@ -117,9 +117,9 @@ namespace GroceryStore.Web.Controllers
                 return BadRequest();
             }
 
-            var p = db.Products.FirstOrDefault(x => x.SKU == product.SKU);
+            var p = db.Products.Where(x => x.Id != product.Id && x.SKU == product.SKU).ToList();
 
-            if (p != null)
+            if (p.Count > 0)
             {
                 return BadRequest("This SKU is not available because another product use it");
             }          
