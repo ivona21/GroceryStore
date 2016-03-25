@@ -57,12 +57,20 @@
                 service.updateCategory();
         }
 
+        service.deleteConfirm = function (id, $index) {
+            bootbox.confirm("Are you sure?", function (result) {
+                if (result) {
+                    service.deleteCategory(id, $index);
+                }
+            });
+        };
+
         service.deleteCategory = function (id, $index) {
             service.category.$delete({ id: id }, function (response) {
                 service.categories.splice($index, 1);
                 service.emptyForm();
             }, function (error) {
-                console.log(error.data.Message);
+                bootbox.alert(error.data.Message);
             });
         }
 
@@ -72,6 +80,6 @@
 
             service.category = new category();
             service.categoryIndex = -1
-        }
+        }       
     }]);
 })();

@@ -12,7 +12,7 @@
                 <tr ng-repeat="category in catCtrl.service.categories">
                     <td> {{category.Name}} </td>
                     <td> <input type="checkbox" ng-model="category.Active" onclick="return false;" /></td>
-                    <td> <a ng-click="catCtrl.service.getCategory(category.Id, $index);">Update</a> | <a ng-click="catCtrl.service.deleteCategory(category.Id, $index);">Delete</a> </td>
+                    <td> <a ng-click="catCtrl.service.getCategory(category.Id, $index);">Update</a> | <a ng-click="catCtrl.service.deleteConfirm(category.Id, $index);">Delete</a> </td>
                 </tr>
             </tbody>
         </table>

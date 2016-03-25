@@ -14,11 +14,11 @@
                     <td> {{product.SKU}} </td>
                     <td> {{product.Name }}</td>
                     <td> <input type="checkbox" ng-model="product.Available" onclick="return false;" /></td>
-                    <td> <a ng-click="productsCtrl.service.getProduct(product.Id, $index);">Update</a> | <a ng-click="productsCtrl.service.deleteProduct(product.Id, $index);">Delete</a> </td>
+                    <td> <a ng-click="productsCtrl.service.getProduct(product.Id, $index);">Update</a> | <a ng-click="productsCtrl.service.deleteConfirm(product.Id, $index);">Delete</a> </td>
                 </tr>
             </tbody>
         </table>
-        <button class="btn btn-success" style="float: right;" ng-click="productsCtrl.service.emptyForm();"><i class="glyphicon glyphicon-plus"></i> Add new product</button>
+        <button class="btn btn-success" style="float: right;" ng-click="productsCtrl.service.emptyForm();"><i class="glyphicon glyphicon-plus"></i> Add new product</button>       
     </div>
    <product-add-update></product-add-update>
 </div>

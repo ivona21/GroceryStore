@@ -64,7 +64,7 @@
                 service.products.push(service.product);
                 service.emptyForm();
             }, function (error) {
-                console.log(error.data.Message);                
+                bootbox.alert(error.data.Message);
             });
         }
 
@@ -72,7 +72,7 @@
             service.product.$update({ id: service.product.Id, product: service.product }, function (response) {
                 service.emptyForm();
             }, function (error) {
-                console.log(error.data.Message);
+                bootbox.alert(error.data.Message);
             });
         }
 
@@ -83,12 +83,20 @@
                 service.updateProduct();
         }
 
+         service.deleteConfirm = function (id, $index) {
+             bootbox.confirm("Are you sure?", function (result) {
+                 if (result) {
+                     service.deleteProduct(id, $index);
+                 }               
+            });
+         }
+
         service.deleteProduct = function (id, $index) {
             service.product.$delete({ id: id }, function (response) {
                 service.products.splice($index, 1);
                 service.emptyForm();
             }, function (error) {
-                console.log(error.data.Message);
+                bootbox.alert(error.data.Message);               
             });
         }
 
@@ -99,5 +107,7 @@
             service.product = new product();
             service.productIndex = -1;
         }
+
+       
     }]);
 })();
