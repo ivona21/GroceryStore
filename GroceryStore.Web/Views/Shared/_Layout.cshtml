@@ -8,28 +8,36 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top" id="header">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Grocery Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>         
+                <ul class="nav">
+                    <li><h1>Grocery Store</h1></li>
+                </ul>
+            </div>
         </div>
     </div>
+
     <div class="container body-content">
+        <div ng-controller="navbarController as navCtrl">
+            <ul class="gc-navbar">
+                <a ui-sref="products"> <li ng-click="navCtrl.changeTab(1);"> Products </li></a>
+                <a ui-sref="categories"><li ng-click="navCtrl.changeTab(2);"> Categories </li></a>
+                <a ui-sref="relationships"> <li ng-click="navCtrl.changeTab(3);">Relationships </li></a>
+                <a ui-sref="priceSets"><li ng-click="navCtrl.changeTab(4);"> Prices</li> </a>
+                <a ui-sref="productReports"><li ng-click="navCtrl.changeTab(5);"> Product Reports</li> </a>
+            </ul>
+        </div>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Grocery Store</p>
-        </footer>
+
+
+    </div>
+    <div id="footer">
+        <p>&copy; @DateTime.Now.Year - Grocery Store</p>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/angular") 
+    @Scripts.Render("~/bundles/angular")
 </body>
 </html>
