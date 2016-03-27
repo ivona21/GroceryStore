@@ -1,0 +1,167 @@
+﻿//colors
+$bg-color: #EBEC8E;
+$light-color: #ddd4d4;
+$dark-color: #222;
+$shadow-color: #a8a967;
+$primary-color-darker: #4F365D;
+$primary-color-lighter: #815177;
+$hover-color: #F2C164;
+
+$shadow: 5px 5px 2px $shadow-color;
+
+html, body {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $bg-color;
+    color: $dark-color;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+.body-content {
+    margin: 50px auto 100px auto;
+}
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#header {
+    background-color: $primary-color-darker;
+    color: $light-color;
+}
+
+.gc-navbar {
+    padding: 10px 30px;
+
+    li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 15px;
+        margin: 0;
+        color: $light-color;
+        background-color: $primary-color-lighter;
+        border: solid $light-color 1px;    
+        position: relative;
+        width: 15%;
+        text-align: center;
+
+        a {
+            color: $light-color;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: $hover-color;
+            color: $dark-color;
+            border: solid 1px $dark-color;
+
+            a {
+                color: $dark-color;
+            }
+        }
+    }
+}
+
+
+a {
+    cursor: pointer;
+    color: $light-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+table {
+    color: $light-color;
+    box-shadow: $shadow;
+
+    thead {
+        background-color: $primary-color-darker;
+    }
+
+    tbody {
+        background-color: $primary-color-lighter;
+    }
+}
+
+
+.active-product-info {
+    border: none;
+    color: $dark-color;
+    font-weight: bolder;
+}
+
+.product-report {
+    background-color: $primary-color-lighter;
+    color: $light-color;
+    border: 7px solid $primary-color-darker;
+    margin-top: 10%;
+    padding: 15px;
+    width: auto;
+    box-shadow: $shadow;
+
+    p {
+        margin-left: 5%;
+    }
+}
+
+
+#footer {
+    background-color: $primary-color-darker;
+    color: $light-color;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    bottom: 0;
+}
+
+
+/*overriding bootstrap*/
+
+.btn-danger, .btn-default {
+    background-color: #F2C164;
+    color: $dark-color;
+    &:hover {
+        background-color: #D43F3A;
+    }
+}
+
+.btn-success, .btn-primary {
+    background-color: #A2C046;
+    color: $dark-color;
+    &:hover {
+        background-color: #4CAE4C;
+    }
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th, .table-hover tbody tr:hover a {
+    background-color: $hover-color;
+    color: $dark-color;
+}
+
+
+.form-control {
+    background-color: $primary-color-lighter;
+    color: $light-color;
+}
+
+.modal-content {
+    background-color: $primary-color-lighter;
+    color: $light-color;
+}

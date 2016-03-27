@@ -1,177 +1,114 @@
 ﻿html, body {
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: 0;
-}
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: 0; }
 
 body {
-    margin: 0;  
-    background-color: #444444;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    color: #ddd4d4;
-}
-
+  background-color: #EBEC8E;
+  color: #222;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 20px; }
 
 .body-content {
-    margin: 50px auto 100px auto;
-}
-
+  margin: 50px auto 100px auto; }
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 280px;
-}
+  max-width: 280px; }
 
 #header {
-    background-color: #222222;
-    color: #ddd4d4;
-}
+  background-color: #4F365D;
+  color: #ddd4d4; }
 
 .gc-navbar {
-    padding: 10px 30px; 
-}
-
-.gc-navbar li {
+  padding: 10px 30px; }
+  .gc-navbar li {
     list-style-type: none;
     display: inline-block;
     padding: 15px;
-    margin: 5px;   
+    margin: 0;
     color: #ddd4d4;
-    background-color: #303030;
+    background-color: #815177;
     border: solid #ddd4d4 1px;
-    box-shadow: 5px 5px 2px #353535;
-    position: relative;    
-}
-
-.gc-navbar li:hover {
-    background-color: #222;
-    color: #ddd4d4;; 
-}
-
-.gc-navbar li:hover a {
-    color: #222;
-}
-
-.gc-navbar li a {
-    color: #ddd4d4;
-     text-decoration: none;
-}
-
-.gc-navbar li a:hover{
-    color: #222;   
-}
-
+    position: relative;
+    width: 15%;
+    text-align: center; }
+    .gc-navbar li a {
+      color: #ddd4d4;
+      text-decoration: none; }
+    .gc-navbar li:hover {
+      background-color: #F2C164;
+      color: #222;
+      border: solid 1px #222; }
+      .gc-navbar li:hover a {
+        color: #222; }
 
 a {
-    cursor: pointer;
-    color: #ddd4d4;
-}
-
-a:hover {
-    color: #808080;
-}
-
-table-bordered {
-    border: #222;
-   box-shadow: 5px 5px 2px #353535;
-}
-
-thead {
-    background-color: #303030;
-}
-
-tbody {
-    background-color: #303030; 
-
-}
-
-.table, form {
-    margin-top: 10%;   
-}
-
-.table {
-     background-color: #303030;
-}
-
-.product-report {
-    border: 1px solid #ddd4d4;
-    margin-top: 10%;
-    background-color: #222;
-    padding: 15px;
-    width: auto;
-}
-
-    .product-report p {
-        margin-left: 5%;
-    }
+  cursor: pointer;
+  color: #ddd4d4; }
+  a:hover {
+    text-decoration: underline; }
 
 table {
-    color: #ddd4d4;
-   box-shadow: 5px 5px 2px #353535;
-}
+  color: #ddd4d4;
+  box-shadow: 5px 5px 2px #a8a967; }
+  table thead {
+    background-color: #4F365D; }
+  table tbody {
+    background-color: #815177; }
+
+.active-product-info {
+  border: none;
+  color: #222;
+  font-weight: bolder; }
+
+.product-report {
+  background-color: #815177;
+  color: #ddd4d4;
+  border: 7px solid #4F365D;
+  margin-top: 10%;
+  padding: 15px;
+  width: auto;
+  box-shadow: 5px 5px 2px #a8a967; }
+  .product-report p {
+    margin-left: 5%; }
 
 #footer {
-    clear: both;   
-    padding: 15px;   
-    background-color: #222;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin: 0;  
-}
-
-
-
-
-/*calendar*/
-::-webkit-datetime-edit { padding: 1em; }
-::-webkit-inner-spin-button { display: none; }
-
+  background-color: #4F365D;
+  color: #ddd4d4;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  bottom: 0; }
 
 /*overriding bootstrap*/
+.btn-danger, .btn-default {
+  background-color: #F2C164;
+  color: #222; }
+  .btn-danger:hover, .btn-default:hover {
+    background-color: #D43F3A; }
 
-
-.btn:hover, .btn:focus {
-    border: solid #ddd4d4 2px;
-}
-
-.btn {
-    border-radius: 0;
-    color: #ddd4d4;   
-    border: 2px solid transparent;
-    padding: 15px;
-    margin: 5px;   
-}
-
-.btn-success, .modal-footer .btn-primary {
-   background-color: #379F7C;      
-   color: #ddd4d4;
-}
-
-
-.btn-danger, .modal-footer .btn-default {
-    background-color: transparent;
-    border: 2px solid #222;  
-    color: #222;
-}
+.btn-success, .btn-primary {
+  background-color: #A2C046;
+  color: #222; }
+  .btn-success:hover, .btn-primary:hover {
+    background-color: #4CAE4C; }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th, .table-hover tbody tr:hover a {
-  background-color: #222;
-  color: #ddd4d4;
-}
-
+  background-color: #F2C164;
+  color: #222; }
 
 .form-control {
-    background-color: #303030;
-    color: #ddd4d4;   
-}
+  background-color: #815177;
+  color: #ddd4d4; }
 
 .modal-content {
-    background-color: #404040;
-}
+  background-color: #815177;
+  color: #ddd4d4; }
 

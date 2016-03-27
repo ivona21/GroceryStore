@@ -21,11 +21,11 @@
     <div class="container body-content">
         <div ng-controller="navbarController as navCtrl">
             <ul class="gc-navbar">
-                <a ui-sref="products"> <li ng-click="navCtrl.changeTab(1);"> Products </li></a>
-                <a ui-sref="categories"><li ng-click="navCtrl.changeTab(2);"> Categories </li></a>
-                <a ui-sref="relationships"> <li ng-click="navCtrl.changeTab(3);">Relationships </li></a>
-                <a ui-sref="priceSets"><li ng-click="navCtrl.changeTab(4);"> Prices</li> </a>
-                <a ui-sref="productReports"><li ng-click="navCtrl.changeTab(5);"> Product Reports</li> </a>
+                <a ui-sref="products"><li ng-click="navCtrl.changeTab(1);">Products</li></a><!--
+                --><a ui-sref="categories"><li ng-click="navCtrl.changeTab(2);">Categories</li></a><!--
+                --><a ui-sref="relationships"><li ng-click="navCtrl.changeTab(3);">Relationships</li></a><!--
+                --><a ui-sref="priceSets"><li ng-click="navCtrl.changeTab(4);">Prices</li></a><!--
+                --><a ui-sref="productReports"><li ng-click="navCtrl.changeTab(5);">Product Reports</li></a>
             </ul>
         </div>
         @RenderBody()
