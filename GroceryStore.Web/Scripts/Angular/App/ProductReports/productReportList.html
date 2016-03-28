@@ -1,19 +1,6 @@
 ﻿<div class="container">
     <div class="col-lg-6">
-        <table class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th> SKU </th>
-                    <th> Name </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-click="prCtrl.service.getReport(product.Id);" ng-repeat="product in prCtrl.service.activeProducts track by $index">
-                    <td> {{product.SKU}} </td>
-                    <td> {{product.Name}} </td>
-                </tr>
-            </tbody>
-        </table>
+        <product-list-short></product-list-short>
     </div>
     <div class="col-lg-6">
         <div class="frame">

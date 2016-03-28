@@ -22,8 +22,7 @@
             });
         }
 
-        service.getPriceSetsByProductId = function (id) {
-            console.log(id);
+        service.getPriceSetsByProductId = function (id) {          
             priceSet.query({ productId: id || service.product.Id }, function (response) {
                 service.priceSets = response;
             });

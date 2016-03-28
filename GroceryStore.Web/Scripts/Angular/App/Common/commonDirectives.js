@@ -6,8 +6,8 @@
 
         return {
             templateUrl: '/Scripts/Angular/App/Common/productListShort.html',
-            controller: 'productsController',
-            controllerAs: 'productsCtrl'
+            controller: 'navbarController',
+            controllerAs: 'navCtrl'
         }
 
     }]);

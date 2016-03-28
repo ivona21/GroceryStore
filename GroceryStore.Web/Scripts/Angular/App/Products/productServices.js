@@ -43,7 +43,7 @@
                 service.products[$index] = service.product;
 
                 //if this action is called from priceset tab, get prices of certain product
-                //service.activeTab is set 
+                //service.activeTab is set in navbarController (commonControllers.js)
                 if (service.activeTab == 4) {
                     service.priceSetService.product = service.product;
                     service.priceSetService.getPriceSetsByProductId();
@@ -51,16 +51,21 @@
             });
         };
 
+        service.setProductIndexTo0 = function () {
+            service.productIndex = 0;
+        }
+       
+
         service.getFirstProduct = function () {
             service.product.$get({ first: 'first' }, function (response) {
                 service.firstProduct = response;               
             });
         };
 
-        service.getReport = function (id) {           
+        service.getReport = function (id, $index) {           
             service.product.$get({ productId: id, littleCheat: 'hi' }, function (response) {
                 service.productReport = response;
-                service.product = service.getProduct(id);
+                service.product = service.getProduct(id, $index);
             });
         }
 
