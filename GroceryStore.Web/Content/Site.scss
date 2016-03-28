@@ -32,12 +32,13 @@ body {
 
 .cursive {
     font-style: italic;
-    font-weight: bolder;  
+    font-weight: bolder;
 }
 
 .highlight {
     background-color: $hover-color;
     color: $dark-color;
+
     a {
         color: $dark-color;
     }
@@ -63,12 +64,20 @@ textarea {
         display: inline-block;
         padding: 15px;
         margin: 0;
-        color: $light-color;
-        background-color: $primary-color-lighter;
-        border: solid $dark-color 1px;    
+        border: solid $dark-color 1px;
         position: relative;
         width: 13%;
         text-align: center;
+
+        &.active {
+            background-color: $hover-color;
+            color: $dark-color;
+        }
+
+        &.passive {
+            color: $light-color;
+            background-color: $primary-color-lighter;
+        }
 
         a {
             color: $light-color;
@@ -100,7 +109,7 @@ a {
 
 table {
     color: $light-color;
-    box-shadow: $shadow;  
+    box-shadow: $shadow;
 
     thead {
         background-color: $primary-color-darker;
@@ -125,7 +134,7 @@ form {
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 5%;
-    z-index: -1;      
+    z-index: -1;
 }
 
 .frame-text {
@@ -146,7 +155,7 @@ form {
 }
 
 .product-report {
-    background-color: $primary-color-lighter;  
+    background-color: $primary-color-lighter;
     border: 7px solid $primary-color-darker;
     margin-top: 10%;
     padding: 15px;
@@ -154,7 +163,7 @@ form {
     box-shadow: $shadow;
 
     h5 {
-        color:black;      
+        color: black;
         font-style: italic;
         text-decoration: underline;
     }
@@ -162,7 +171,7 @@ form {
     p {
         margin-left: 5%;
         font-weight: bolder;
-        color: $light-color
+        color: $light-color;
     }
 }
 
@@ -183,6 +192,7 @@ form {
 .btn-danger, .btn-default {
     background-color: #F2C164;
     color: $dark-color;
+
     &:hover {
         background-color: #D43F3A;
     }
@@ -191,6 +201,7 @@ form {
 .btn-success, .btn-primary {
     background-color: #A2C046;
     color: $dark-color;
+
     &:hover {
         background-color: #4CAE4C;
     }
@@ -206,5 +217,3 @@ form {
     background-color: $primary-color-lighter;
     color: $light-color;
 }
-
-

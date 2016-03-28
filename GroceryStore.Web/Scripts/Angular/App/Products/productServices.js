@@ -19,7 +19,7 @@
         service.activeProducts = [];
         service.product = new product();
         service.productIndex;
-        service.activeTab;
+        service.activeTab = 1;
 
         service.productReport = {};
 

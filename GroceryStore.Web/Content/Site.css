@@ -42,12 +42,16 @@ textarea {
     display: inline-block;
     padding: 15px;
     margin: 0;
-    color: #ddd4d4;
-    background-color: #815177;
     border: solid #222 1px;
     position: relative;
     width: 13%;
     text-align: center; }
+    .gc-navbar li.active {
+      background-color: #F2C164;
+      color: #222; }
+    .gc-navbar li.passive {
+      color: #ddd4d4;
+      background-color: #815177; }
     .gc-navbar li a {
       color: #ddd4d4;
       text-decoration: none; }
