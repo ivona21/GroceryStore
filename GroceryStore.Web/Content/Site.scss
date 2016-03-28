@@ -30,6 +30,10 @@ body {
     margin: 50px auto 100px auto;
 }
 
+.cursive {
+    font-style: italic;
+    font-weight: bolder;  
+}
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -53,9 +57,9 @@ textarea {
         margin: 0;
         color: $light-color;
         background-color: $primary-color-lighter;
-        border: solid $light-color 1px;    
+        border: solid $dark-color 1px;    
         position: relative;
-        width: 15%;
+        width: 13%;
         text-align: center;
 
         a {
@@ -88,7 +92,7 @@ a {
 
 table {
     color: $light-color;
-    box-shadow: $shadow;
+    box-shadow: $shadow;  
 
     thead {
         background-color: $primary-color-darker;
@@ -99,24 +103,58 @@ table {
     }
 }
 
+.table-in-frame {
+    margin-top: 7%;
+}
 
-.active-product-info {
-    border: none;
-    color: $dark-color;
+form {
+    padding-top: 5%;
+}
+
+
+.frame {
+    border: solid $dark-color 1px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    z-index: -1;      
+}
+
+.frame-text {
     font-weight: bolder;
+    width: 20%;
+    text-align: center;
+    background-color: $bg-color;
+    color: $dark-color;
+    margin-top: -10px;
+}
+
+.frame-text-long {
+    width: 80%;
+}
+
+.frame-text-middle {
+    width: 60%;
 }
 
 .product-report {
-    background-color: $primary-color-lighter;
-    color: $light-color;
+    background-color: $primary-color-lighter;  
     border: 7px solid $primary-color-darker;
     margin-top: 10%;
     padding: 15px;
     width: auto;
     box-shadow: $shadow;
 
+    h5 {
+        color:black;      
+        font-style: italic;
+        text-decoration: underline;
+    }
+
     p {
         margin-left: 5%;
+        font-weight: bolder;
+        color: $light-color
     }
 }
 
@@ -156,12 +194,9 @@ table {
 }
 
 
-.form-control {
+.form-control, .modal-content {
     background-color: $primary-color-lighter;
     color: $light-color;
 }
 
-.modal-content {
-    background-color: $primary-color-lighter;
-    color: $light-color;
-}
+

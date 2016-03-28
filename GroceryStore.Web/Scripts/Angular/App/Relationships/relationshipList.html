@@ -16,21 +16,22 @@
         </table>
     </div>
     <div class="col-lg-6">
-
-        <table class="table table-bordered table-hover">          
-            <thead>
-                <tr><th>{{relCtrl.productService.product.SKU}}, {{relCtrl.productService.product.Name}} - currently active categories</th><th></th></tr>
-                <tr>
-                    <th> Assigned </th>
-                    <th> Category </th>
-                </tr>
-            </thead>
-            <tbody>              
-                <tr ng-repeat="category in relCtrl.service.assignedCategories">                   
-                    <td> <input type="checkbox" ng-model="category.Connected"  ng-click="relCtrl.connectOrDisconnect(category.Connected, category.Id);"/></td>
-                    <td> {{ category.CategoryName }} </td>
-                </tr>
-           </tbody>
-        </table>
+        <div class="frame">
+            <h5 class="frame-text frame-text-long">{{relCtrl.productService.product.SKU}}, {{relCtrl.productService.product.Name}} - currently active categories</h5>
+            <table class="table table-bordered table-hover table-in-frame">
+                <thead>                   
+                    <tr>
+                        <th> Assigned </th>
+                        <th> Category </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="category in relCtrl.service.assignedCategories">
+                        <td> <input type="checkbox" ng-model="category.Connected" ng-click="relCtrl.connectOrDisconnect(category.Connected, category.Id);" /></td>
+                        <td> {{ category.CategoryName }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

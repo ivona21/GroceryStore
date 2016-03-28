@@ -1,4 +1,4 @@
-﻿<div class="container">   
+﻿<div class="container">
     <div class="col-lg-6">
         <table class="table table-bordered table-hover">
             <thead>
@@ -16,16 +16,18 @@
         </table>
     </div>
     <div class="col-lg-6">
-        <div class="product-report">
-            <h4>{{prCtrl.service.product.SKU}}, {{prCtrl.service.product.Name}}</h4>
-            <h5> Product Description </h5>
-            <p> {{ prCtrl.service.productReport.Description}}</p>
-            <h5> Current Price </h5>
-            <p> {{ prCtrl.service.productReport.CurrentPrice | currency : $}} </p>
-            <h5>Average price </h5>
-            <p> {{ prCtrl.service.productReport.AveragePrice | currency : $}} </p>
-            <h5> Categories </h5>
-            <p> {{ prCtrl.service.productReport.Categories}} </p>
+        <div class="frame">
+            <h5 class="frame-text frame-text-middle">{{prCtrl.service.product.SKU}}, {{prCtrl.service.product.Name}}</h5>
+            <div class="product-report">               
+                <h5> Product Description </h5>
+                <p> {{ prCtrl.service.productReport.Description}}</p>
+                <h5> Current Price </h5>
+                <p> {{ prCtrl.service.productReport.CurrentPrice | currency : $}} </p>
+                <h5>Average price </h5>
+                <p> {{ prCtrl.service.productReport.AveragePrice | currency : $}} </p>
+                <h5> Categories </h5>
+                <p> {{ prCtrl.service.productReport.Categories}} </p>
+            </div>
         </div>
     </div>
 </div>

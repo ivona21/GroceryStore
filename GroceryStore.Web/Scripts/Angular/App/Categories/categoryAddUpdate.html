@@ -1,16 +1,18 @@
-﻿<div class="col-lg-5 col-lg-offset-1">
-    <form>
-        <h6> ----- Update ------ </h6>
-        <div class="form-group">
-            <label> Category Name: </label>
-            <input type="text" class="form-control" ng-model="catCtrl.service.category.Name" />
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" ng-model="catCtrl.service.category.Active" /> category is active
-            </label>
-        </div>
-        <button type="submit" class="btn btn-danger btn-sm" ng-click="catCtrl.service.emptyForm();"> Cancel </button>
-        <button type="submit" class="btn btn-success btn-sm" ng-click="catCtrl.service.addOrUpdate();"> Update / Save Changes </button>
-    </form>
+﻿<div class="col-lg-6">
+    <div class="frame">
+        <h4 class="frame-text">Update</h4>
+        <form>           
+            <div class="form-group">
+                <label> Category Name: </label>
+                <input type="text" class="form-control" ng-model="catCtrl.service.category.Name" />
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="catCtrl.service.category.Active" /> category is active
+                </label>
+            </div>
+            <button type="submit" class="btn btn-danger btn-sm" ng-click="catCtrl.service.emptyForm();"> Cancel </button>
+            <button type="submit" class="btn btn-success btn-sm" ng-click="catCtrl.service.addOrUpdate();"> Update / Save Changes </button>
+        </form>
+    </div>
 </div>

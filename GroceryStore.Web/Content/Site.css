@@ -15,6 +15,10 @@ body {
 .body-content {
   margin: 50px auto 100px auto; }
 
+.cursive {
+  font-style: italic;
+  font-weight: bolder; }
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -34,9 +38,9 @@ textarea {
     margin: 0;
     color: #ddd4d4;
     background-color: #815177;
-    border: solid #ddd4d4 1px;
+    border: solid #222 1px;
     position: relative;
-    width: 15%;
+    width: 13%;
     text-align: center; }
     .gc-navbar li a {
       color: #ddd4d4;
@@ -62,21 +66,48 @@ table {
   table tbody {
     background-color: #815177; }
 
-.active-product-info {
-  border: none;
+.table-in-frame {
+  margin-top: 7%; }
+
+form {
+  padding-top: 5%; }
+
+.frame {
+  border: solid #222 1px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+  z-index: -1; }
+
+.frame-text {
+  font-weight: bolder;
+  width: 20%;
+  text-align: center;
+  background-color: #EBEC8E;
   color: #222;
-  font-weight: bolder; }
+  margin-top: -10px; }
+
+.frame-text-long {
+  width: 80%; }
+
+.frame-text-middle {
+  width: 60%; }
 
 .product-report {
   background-color: #815177;
-  color: #ddd4d4;
   border: 7px solid #4F365D;
   margin-top: 10%;
   padding: 15px;
   width: auto;
   box-shadow: 5px 5px 2px #a8a967; }
+  .product-report h5 {
+    color: black;
+    font-style: italic;
+    text-decoration: underline; }
   .product-report p {
-    margin-left: 5%; }
+    margin-left: 5%;
+    font-weight: bolder;
+    color: #ddd4d4; }
 
 #footer {
   background-color: #4F365D;
@@ -104,11 +135,7 @@ table {
   background-color: #F2C164;
   color: #222; }
 
-.form-control {
-  background-color: #815177;
-  color: #ddd4d4; }
-
-.modal-content {
+.form-control, .modal-content {
   background-color: #815177;
   color: #ddd4d4; }
 
