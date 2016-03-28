@@ -184,7 +184,15 @@ namespace GroceryStore.Web.Controllers
                 product.SumOfPrices = product.SumOfPrices - price;
             }
 
-            product.AveragePrice = product.SumOfPrices / product.NumberOfPrices;
+            if (product.NumberOfPrices > 0)
+            {
+                product.AveragePrice = product.SumOfPrices / product.NumberOfPrices;
+            }
+            else
+            {
+                product.AveragePrice = 0;
+            }
+          
 
             db.Entry(product).State = EntityState.Modified;
             db.SaveChanges();
