@@ -35,6 +35,14 @@ body {
     font-weight: bolder;  
 }
 
+.highlight {
+    background-color: $hover-color;
+    color: $dark-color;
+    a {
+        color: $dark-color;
+    }
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

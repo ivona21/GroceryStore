@@ -19,6 +19,12 @@ body {
   font-style: italic;
   font-weight: bolder; }
 
+.highlight {
+  background-color: #F2C164;
+  color: #222; }
+  .highlight a {
+    color: #222; }
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

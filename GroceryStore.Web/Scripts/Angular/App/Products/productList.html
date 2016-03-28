@@ -1,5 +1,5 @@
-﻿<div class="container">  
-    <div class="col-lg-6">      
+﻿<div class="container">
+    <div class="col-lg-6">     
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -10,7 +10,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="product in productsCtrl.service.products track by $index">
+                <tr ng-repeat="product in productsCtrl.service.products track by $index" ng-click="productsCtrl.service.getProduct(product.Id, $index);" ng-class="{'highlight' : $index == productsCtrl.service.productIndex}">
                     <td> {{product.SKU}} </td>
                     <td> {{product.Name }}</td>
                     <td> <input type="checkbox" ng-model="product.Available" onclick="return false;" /></td>
@@ -18,7 +18,7 @@
                 </tr>
             </tbody>
         </table>
-        <button class="btn btn-success" style="float: right;" ng-click="productsCtrl.service.emptyForm();"><i class="glyphicon glyphicon-plus"></i> Add new product</button>       
+        <button class="btn btn-success" style="float: right;" ng-click="productsCtrl.service.emptyForm();"><i class="glyphicon glyphicon-plus"></i> Add new product</button>     
     </div>
-   <product-add-update></product-add-update>
+    <product-add-update></product-add-update>
 </div>

@@ -9,7 +9,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="category in catCtrl.service.categories">
+                <tr ng-repeat="category in catCtrl.service.categories" ng-click="catCtrl.service.getCategory(category.Id, $index);" ng-class="{'highlight' : $index == catCtrl.service.categoryIndex}">                                                                                                                                   
                     <td> {{category.Name}} </td>
                     <td> <input type="checkbox" ng-model="category.Active" onclick="return false;" /></td>
                     <td> <a ng-click="catCtrl.service.getCategory(category.Id, $index);">Update</a> | <a ng-click="catCtrl.service.deleteConfirm(category.Id, $index);">Delete</a> </td>

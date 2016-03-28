@@ -19,6 +19,7 @@
         service.activeProducts = [];
         service.product = new product();
         service.productIndex;
+        service.activeTab;
 
         service.productReport = {};
 
@@ -35,13 +36,18 @@
         }
 
         service.getProduct = function (id, $index) {
-            service.product = new product();
+            service.product = new product();           
             service.product.$get({ id: id }, function (response) {
                 service.product = response;
                 service.productIndex = $index;
                 service.products[$index] = service.product;
-                service.priceSetService.product = service.product;
-                service.priceSetService.getPriceSetsByProductId();               
+
+                //if this action is called from priceset tab, get prices of certain product
+                //service.activeTab is set 
+                if (service.activeTab == 4) {
+                    service.priceSetService.product = service.product;
+                    service.priceSetService.getPriceSetsByProductId();
+                }               
             });
         };
 

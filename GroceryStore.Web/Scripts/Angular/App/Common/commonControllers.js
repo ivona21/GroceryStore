@@ -2,10 +2,11 @@
 
     var module = angular.module('commonControllers', []);
 
-    module.controller('navbarController', ['product', 'productService', 'priceSetService', 'relationshipService', function (product, productService, priceSetService, relationshipService) {
+    module.controller('navbarController', ['product', 'productService', 'categoryService', 'priceSetService', 'relationshipService', function (product, productService, categoryService, priceSetService, relationshipService) {
 
         var ctrl = this;
         ctrl.productService = productService;
+        ctrl.categoryService = categoryService;
         ctrl.priceSetService = priceSetService;
         ctrl.relationshipService = relationshipService;
 
@@ -18,14 +19,18 @@
         };
 
         ctrl.changeTab = function (tab) {
-            ctrl.tab = tab;           
+            ctrl.tab = tab;
+            ctrl.productService.activeTab = tab;
             if (ctrl.tab == 3 || ctrl.tab == 4 || ctrl.tab == 5) {
                 ctrl.getActiveProducts();
                 ctrl.getFirstProduct();
-            }
-            if (ctrl.tab == 1) {
+            } else if (ctrl.tab == 1) {
                 ctrl.productService.emptyForm();
+            } else if (ctrl.tab == 2) {
+                ctrl.categoryService.emptyForm();
             }
+
+
         }
 
         ctrl.getFirstProduct = function () {
